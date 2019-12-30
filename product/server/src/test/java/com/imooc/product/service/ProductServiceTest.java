@@ -1,6 +1,7 @@
 package com.imooc.product.service;
 
-import com.imooc.product.dto.CartDTO;
+import com.imooc.product.common.DecreaseStockInput;
+import com.imooc.product.common.ProductInfoOutput;
 import com.imooc.product.dataobject.ProductInfo;
 import org.junit.Assert;
 import org.junit.Test;
@@ -27,15 +28,15 @@ public class ProductServiceTest {
 
     @Test
     public void findList(){
-        List<ProductInfo> list = productService.findList(Arrays.asList("157875196366160022","157875227953464068"));
+        List<ProductInfoOutput> list = productService.findList(Arrays.asList("157875196366160022","157875227953464068"));
         Assert.assertTrue(list.size() > 0);
     }
 
     @Test
     public void decreaseStock(){
-        CartDTO cartDTO = new CartDTO();
-        cartDTO.setProductId("157875196366160022");
-        cartDTO.setProductQuantity(2);
-        productService.decreaseStock(Arrays.asList(cartDTO));
+        DecreaseStockInput decreaseStockInput = new DecreaseStockInput();
+        decreaseStockInput.setProductId("157875196366160022");
+        decreaseStockInput.setProductQuantity(2);
+        productService.decreaseStock(Arrays.asList(decreaseStockInput));
     }
 }

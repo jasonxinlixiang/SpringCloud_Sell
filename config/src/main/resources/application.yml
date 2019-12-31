@@ -1,6 +1,14 @@
 spring:
   application:
     name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jasonxinlixiang/config-repo.git
+          username: 494312263@qq.com
+          password: xvD45eRR
+          basedir: /Users/xiangxinli/SpringCloud_Sell/config/basedir
 eureka:
   client:
     service-url:

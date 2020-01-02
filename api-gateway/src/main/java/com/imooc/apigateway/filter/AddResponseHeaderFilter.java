@@ -13,7 +13,7 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.SEND_RESPONSE_FILTER_ORDER;
 
 @Component
-public class AddResponseHeader extends ZuulFilter {
+public class AddResponseHeaderFilter extends ZuulFilter {
     @Override
     public String filterType() {
         return POST_TYPE;

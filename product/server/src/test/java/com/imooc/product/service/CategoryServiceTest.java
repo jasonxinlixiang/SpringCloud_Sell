@@ -20,7 +20,7 @@ public class CategoryServiceTest {
 
     @Test
     public void findByCategoryTypeIn() {
-        List<ProductCategory> list = categoryService.findByCategoryTypeIn(Arrays.asList(11, 22));
+        List<ProductCategory> list = categoryService.findByCategoryTypeIn(Arrays.asList(1, 22));
         Assert.assertTrue(list.size() > 0);
     }
 }

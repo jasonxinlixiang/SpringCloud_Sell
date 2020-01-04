@@ -11,3 +11,10 @@ spring:
     password: guest
 env:
   test
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic  
